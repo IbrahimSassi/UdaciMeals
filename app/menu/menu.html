@@ -1,0 +1,20 @@
+<div class="row ">
+    <div class="col-md-4 col-sm-4" ng-repeat="item in menu.items">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" ng-src="images/{{item.img}}" alt="{{item.name}}">
+            </div>
+            <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+                {{item.name}}<i class="material-icons right"></i></span>
+
+                <p>Rating : {{item.rating}} <span ng-if="item.rating >4.0" ng-class="{'new badge green' : item.rating >4.5}">  People love this item</span></p>
+                <p>Image {{item.img}}</p>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
