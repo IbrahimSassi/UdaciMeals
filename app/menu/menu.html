@@ -8,8 +8,26 @@
             <span class="card-title activator grey-text text-darken-4">
                 {{item.name}}<i class="material-icons right"></i></span>
 
-                <p>Rating : {{item.rating}} <span ng-if="item.rating >4.0" ng-class="{'new badge green' : item.rating >4.5}">  People love this item</span></p>
+                <p>Rating : {{item.rating}}
+                    <span ng-if="item.rating >4.0" ng-class="{'new badge green' : item.rating >4.5}"
+                          data-badge-caption="People love this item"> </span>
+                <span ng-if="item.rating < 2.5" ng-class="{'new badge red' : item.rating < 2.5}"
+                      data-badge-caption="People hate this item"> </span></p>
                 <p>Image {{item.img}}</p>
+                <div class="center-align">
+                    <button class="btn btn-flat" ng-click="menu.increment(item)">+</button>
+                    <button class="btn btn-flat" ng-click="menu.decrement(item)">-</i></button>
+
+                </div>
+                <div class="well">
+                    <select class="browser-default" ng-model="item.meal" name="" id="">
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                    </select>
+                    <button class="btn btn-block" ng-click="menu.chooseItem(item.meal,item.name)">Select Item</button>
+                </div>
+
 
             </div>
 

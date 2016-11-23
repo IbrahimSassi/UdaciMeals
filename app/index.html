@@ -12,10 +12,11 @@
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body ng-app="myApp" >
+<body ng-app="udaciMeals" >
 
 
-  <div ng-view></div>
+<div ng-include="'orders/order.html'" ng-controller="orderCtrl as order"></div>
+<div ng-include="'menu/menu.html'" ng-controller="menuCtrl as menu"></div>
 
 
   <!-- In production use:
@@ -28,5 +29,8 @@
   <script src="bower_components/materialize/js/materialize.js"></script>
   <script src="app.js"></script>
   <script src="menu/menu.js"></script>
+  <script src="orders/orderManager.controller.js"></script>
+  <script src="menu/foodFinder.service.js"></script>
+  <script src="orders/orderManager.service.js"></script>
 </body>
 </html>
