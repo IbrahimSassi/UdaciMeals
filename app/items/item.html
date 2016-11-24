@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-image">
+                <img src="images/{{myItem.item.img}}">
+                <span class="card-title">{{item.name}}</span>
+            </div>
+            <div class="card-content">
+                <p>Rating : {{myItem.item.rating}}
+                    <span ng-if="myItem.item.rating >4.0" ng-class="{'new badge green' : myItem.item.rating >4.5}"
+                          data-badge-caption="People love this item"> </span>
+                    <span ng-if="myItem.item.rating < 2.5" ng-class="{'new badge red' : myItem.item.rating < 2.5}"
+                          data-badge-caption="People hate this item"> </span></p>
+                <p>Image {{myItem.item.img}}</p>
+                <p><a ui-sref="item.nutrition">Nutrition</a></p>
+                <div ui-view></div>
+            </div>
+
+            <div class="card-action">
+                <a href="/">Back to list</a>
+            </div>
+        </div>
+    </div>
+</div>
+

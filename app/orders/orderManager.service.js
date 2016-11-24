@@ -5,7 +5,6 @@
 angular.module('udaciMeals')
 
     .service('orderManagerService',function () {
-
         var selectedDay = 'Monday';
 
         var orderSelection =
@@ -38,11 +37,11 @@ angular.module('udaciMeals')
         };
 
         this.setActiveDay = function (day) {
-            selectedDay =day;
-        }
+            selectedDay = day;
+        };
         this.getActiveDay = function () {
             return selectedDay;
-        }
+        };
 
         this.chooseMenuOption = function (meal,menuItem) {
             orderSelection[selectedDay][meal] = menuItem;

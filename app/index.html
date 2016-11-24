@@ -14,10 +14,12 @@
 </head>
 <body ng-app="udaciMeals" >
 
+<div class="container">
+  <div ng-include="'orders/order.html'" ng-controller="orderCtrl as order"></div>
+  <!--<div ng-include="'menu/menu.html'" ng-controller="menuCtrl as menu"></div>-->
+  <div ui-view></div>
 
-<div ng-include="'orders/order.html'" ng-controller="orderCtrl as order"></div>
-<div ng-include="'menu/menu.html'" ng-controller="menuCtrl as menu"></div>
-
+</div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -27,10 +29,12 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/materialize/js/materialize.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="app.js"></script>
   <script src="menu/menu.js"></script>
   <script src="orders/orderManager.controller.js"></script>
   <script src="menu/foodFinder.service.js"></script>
   <script src="orders/orderManager.service.js"></script>
+  <script src="items/item.controller.js"></script>
 </body>
 </html>
